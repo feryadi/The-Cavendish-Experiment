@@ -1,0 +1,17 @@
+t = 0 : 0.1 : 4047;
+w=0.030
+a=0.18
+b=-68*pi/180
+
+A=load('C:\cav2.txt');
+plot(A(:,1),A(:,2))
+hold on
+plot (t,a*sin(w*t+b)-1.28,"--");
+
+xlabel('Time (s)');
+ylabel('Voltage');
+legend('Data','Sin');
+
+xlim([0,2*pi]);
+ylim([-1,1]);
+
